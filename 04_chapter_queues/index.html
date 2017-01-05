@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<script>
+    var queue = new Queue();
+    console.log(queue.isEmpty());	//outputs	true
+
+    queue.enqueue("John");
+    queue.enqueue("Jack");
+
+    queue.enqueue("Camila");
+
+    queue.print();
+    console.log(queue.size());	//outputs	3
+    console.log(queue.isEmpty());	//outputs	false
+
+    queue.dequeue();
+    queue.dequeue();
+    queue.print();
+
+    // ========= PriorityQueue =========
+
+    var priorityQueue = new PriorityQueue();
+    priorityQueue.enqueue("John", 2);
+    priorityQueue.enqueue("Jack", 1);
+    priorityQueue.enqueue("Camila", 1);
+    priorityQueue.print();
+
+
+    // ========= Potato Game =========
+    var names = ['John', 'Jack', 'Camila', 'Ingrid', 'Carl'];
+    var winner = hotPotato(names, 7);
+    console.log('The	winner	is:	' + winner);
+
+</script>
+</body>
+</html>
